@@ -17,7 +17,7 @@ function Dashboard() {
       <header className="relative z-10 bg-black bg-opacity-80 py-6 border-b-4 border-red-600">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <h1 className="text-4xl font-bold" style={{ fontFamily: "'Bangers', cursive", textShadow: '3px 3px 0 #000' }}>
-            MARVEL MULTIVERSE
+            MULTIVERSE MATCHMAKER
           </h1>
           <div className="text-yellow-400 text-xl" style={{ fontFamily: "'Bangers', cursive" }}>
             Welcome, <span className="text-red-400">{username}</span>!

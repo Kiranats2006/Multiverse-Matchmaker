@@ -32,7 +32,7 @@ export default function Login() {
                         className="text-4xl font-bold text-yellow-400 mb-2 tracking-wide"
                         style={{ fontFamily: "'Bangers', cursive" }}
                     >
-                        MARVEL MATCHMAKER
+                        MULTIVERSE MATCHMAKER
                     </h1>
                     <p className="text-gray-300">Access Your Hero Dashboard</p>
                 </div>

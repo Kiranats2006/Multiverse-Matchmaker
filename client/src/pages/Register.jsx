@@ -31,7 +31,7 @@ export default function Register() {
                     <h1 className="text-4xl font-bold text-yellow-400 mb-2 font-marvel tracking-wide"
                                             style={{ fontFamily: "'Bangers', cursive" }}
 >
-                        MARVEL MATCHMAKER
+                        MULTIVERSE MATCHMAKER
                     </h1>
                     <p className="text-gray-300">Join Earth's Mightiest Community</p>
                 </div>
