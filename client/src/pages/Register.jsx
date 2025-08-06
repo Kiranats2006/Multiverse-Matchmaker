@@ -11,7 +11,7 @@ export default function Register() {
     const handleRegister = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:8080/api/register', {
+            const response = await axios.post('http://localhost:8080/api/auth/register', {
                 username,
                 email,
                 password
@@ -28,7 +28,9 @@ export default function Register() {
         <div className="min-h-screen bg-gradient-to-b from-red-900 to-black flex items-center justify-center p-4">
             <div className="w-full max-w-md">
                 <div className="text-center mb-8">
-                    <h1 className="text-4xl font-bold text-yellow-400 mb-2 font-marvel tracking-wide">
+                    <h1 className="text-4xl font-bold text-yellow-400 mb-2 font-marvel tracking-wide"
+                                            style={{ fontFamily: "'Bangers', cursive" }}
+>
                         MARVEL MATCHMAKER
                     </h1>
                     <p className="text-gray-300">Join Earth's Mightiest Community</p>
