@@ -7,22 +7,32 @@ export default function Login() {
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
 
-    const handleLogin = async (e) => {
-        e.preventDefault();
-        try {
-            const response = await axios.post("http://localhost:8080/api/auth/login", {
-                email,
-                password
-            });
-            // console.log(response.data);
-            localStorage.setItem('token', response.data.token);
-            localStorage.setItem('username', response.data.username);
-            navigate('/dashboard'); 
-        } catch (error) {
-            console.error(error);
-            alert("Login failed. Check your credentials and try again.");
+const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+        const response = await axios.post("http://localhost:8080/api/user/login", {
+            email,
+            password
+        });
+
+        if (response.data.error) {
+            console.error(response.data);
+            alert("Login failed: " + response.data.error);
+            return;
         }
+
+        console.log(response.data);
+        localStorage.setItem('token', response.data.token);
+        localStorage.setItem('username', response.data.username);
+        localStorage.setItem('userId', response.data.userId);
+        console.log("userId", localStorage.getItem("userId"));
+        navigate('/dashboard'); 
+    } catch (error) {
+        console.error(error);
+        alert("Login failed. Check your credentials and try again.");
     }
+}
+
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-red-900 to-black flex items-center justify-center p-4">
